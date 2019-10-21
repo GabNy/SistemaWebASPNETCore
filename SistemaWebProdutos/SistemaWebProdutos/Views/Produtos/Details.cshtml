@@ -1,0 +1,36 @@
+﻿@model SistemaWebProdutos.Models.Produtos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produtos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdNome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProdNome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdPreco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProdPreco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdQtde)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProdQtde)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProdCodigo">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
